@@ -294,6 +294,19 @@ public class Sudoku extends LatinSquare {
 		super.setLatinSquare(puzzle);
 		
 	}
+	public void shuffleArray(int[] arr)
+	{
+		Random r = new Random();
+		for(int i =0; i<arr.length;i++)
+		{
+			int randPos =r.nextInt(arr.length);
+			int temp = arr[i];
+			arr[i]=arr[randPos];
+			arr[randPos]=temp;
+			
+			
+		}
+	}
 	private void shuffleRegion(int r) {
 		
 	}
