@@ -230,5 +230,68 @@ public class SudokuTest {
 		}
 		
 	}	
+	
+	@Test
+	public void shuffleSudoku_test1()
+	{
+		Sudoku s1= null;
+		
+		int[][] puzzle = { 
+				{1,2,3,4},{4,3,2,1},{2,1,4,3},{3,5,1,2}};
+		
+		int [] Region1 = {1,2,3,4};
+		try {
+			 s1 = new Sudoku(puzzle);
+			 s1.shuffleArray(Region1);
+			 System.out.println(Arrays.toString(Region1));
+		} catch (Exception e) {
+			fail("Bad Sudoku");
+		}
+			
+			
+		
+	}
+	
+	@Test
+	public void shuffleSudoku_test2()
+	{
+		Sudoku s1= null;
+		
+		int[][] puzzle = { 
+				{1,2,3,4},{4,3,2,1},{2,1,4,3},{3,5,1,2}};
+		
+		int [] Region2 = {4,3,2,1};
+		try {
+			 s1 = new Sudoku(puzzle);
+			 s1.shuffleArray(Region2);
+			 System.out.println(Arrays.toString(Region2));
+		} catch (Exception e) {
+			fail("Bad Sudoku");
+		}
+			
+			
+		
+	}
+	
+	@Test
+	public void shuffleSudoku_test3()
+	{
+		Sudoku s1= null;
+		
+		int[][] puzzle = { 
+				{1,2,3,4},{4,3,2,1},{2,1,4,3},{3,5,1,2}};
+		
+		int [] Region3 = {2,1,4,3};
+		try {
+			 s1 = new Sudoku(puzzle);
+			 s1.shuffleArray(Region3);
+			 System.out.println(Arrays.toString(Region3));
+		} catch (Exception e) {
+			fail("Bad Sudoku");
+		}
+			
+			
+		
+	}
 
 }
