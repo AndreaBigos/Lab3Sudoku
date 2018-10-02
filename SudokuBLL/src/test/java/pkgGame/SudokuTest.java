@@ -264,8 +264,7 @@ public class SudokuTest {
 		} catch (Exception e) {
 			fail("Bad Sudoku");
 		}
-			
-			
+				
 		
 	}
 	
@@ -316,7 +315,7 @@ public class SudokuTest {
 		try {
 			 s1 = new Sudoku(puzzle);
 			 s1.shuffleRegion(2);
-			 System.out.println(s1);
+			 s1.printPuzzle();
 		} catch (Exception e) {
 			fail("Bad Sudoku");
 		}
@@ -330,7 +329,7 @@ public class SudokuTest {
 		try {
 			 s1 = new Sudoku(puzzle);
 			 s1.shuffleRegion(0);
-			 System.out.println(s1);
+			 s1.printPuzzle();
 		} catch (Exception e) {
 			fail("Bad Sudoku");
 		}
@@ -344,7 +343,7 @@ public class SudokuTest {
 		try {
 			 s1 = new Sudoku(puzzle);
 			 s1.shuffleRegion(3);
-			 System.out.println(s1);
+			 s1.printPuzzle();
 		} catch (Exception e) {
 			fail("Bad Sudoku");
 		}
@@ -357,7 +356,93 @@ public class SudokuTest {
 		try {
 			s1 = new Sudoku(puzzle);
 			s1.fillDiagonalRegions();
-			System.out.println(s1);
+			s1.printPuzzle();
+		}
+		catch (Exception e) {
+			fail("Bad Sudoku");
+		}
+	}
+	
+	@Test
+	public void fillDiagonalRegions_Test2() {
+		Sudoku s1 = null;
+		int[][] puzzle = {{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0}};
+		
+		try {
+			s1 = new Sudoku(puzzle);
+			s1.fillDiagonalRegions();
+			s1.printPuzzle();
+		}
+		catch (Exception e) {
+			fail("Bad Sudoku");
+		}
+	}
+	@Test
+	public void fillDiagonalRegions_Test3() {
+		Sudoku s1 = null;
+		int[][] puzzle = {{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+				{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}};
+		
+		try {
+			s1 = new Sudoku(puzzle);
+			s1.fillDiagonalRegions();
+			s1.printPuzzle();
+		}
+		catch (Exception e) {
+			fail("Bad Sudoku");
+		}
+	}
+	
+	@Test
+	public void setRegion_Test1() {
+		Sudoku s1 = null;
+		int[][] puzzle = {{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
+		
+		try {
+			int r=1;
+			s1 = new Sudoku(puzzle);
+			s1.setRegion(r);
+			s1.printPuzzle();
+		}
+		catch (Exception e) {
+			fail("Bad Sudoku");
+		}
+	}
+	
+	@Test
+	public void setRegion_Test2() {
+		Sudoku s1 = null;
+		int[][] puzzle = {{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
+		
+		try {
+			int r=0;
+			s1 = new Sudoku(puzzle);
+			s1.setRegion(r);
+			s1.printPuzzle();
+		}
+		catch (Exception e) {
+			fail("Bad Sudoku");
+		}
+	}
+	
+	@Test
+	public void setRegion_Test3() {
+		Sudoku s1 = null;
+		int[][] puzzle = {{0,0,0,0},{0,0,0,0},{0,0,0,0},{0,0,0,0}};
+		
+		try {
+			int r=3;
+			s1 = new Sudoku(puzzle);
+			s1.setRegion(r);
+			s1.printPuzzle();
 		}
 		catch (Exception e) {
 			fail("Bad Sudoku");
